@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storyboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sarabun': ['Sarabun', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .float { animation: float 3s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sarabun transition-colors duration-300">
+    <header class="bg-white dark:bg-gray-800 shadow-md fixed w-full z-10 transition-colors duration-300">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-semibold">Storyboard</a>
+            <div class="flex items-center">
+                <a href="pages/actors.html" class="text-lg mr-4 hover:text-blue-600 transition duration-300">นักแสดง</a>
+                <a href="pages/crew.html" class="text-lg mr-4 hover:text-blue-600 transition duration-300">ทีมงาน</a>
+                <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-24 pb-12">
+        <section class="container mx-auto px-6">
+            <h1 class="text-5xl font-bold mb-8 text-center">โลกแห่งมันฝรั่ง</h1>
+            <p class="text-xl mb-12 text-center max-w-3xl mx-auto">คุณเคยเห็นมันฝรั่งบินได้ไหม? ถ้ายังไม่เคย คุณก็ไม่ได้อยู่ในโลกของเรา! ที่นี่เรามีมันฝรั่งที่สามารถเต้นและร้องเพลงได้ด้วย!</p>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 text-center transform hover:scale-105 transition duration-300">
+                    <h2 class="text-3xl font-semibold text-purple-600 dark:text-purple-400 mb-4">คุณรู้หรือไม่?</h2>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">กล้วยเป็นผลไม้ชนิดเดียวที่สามารถใช้เป็นเครื่องประดับบนหมวกได้อย่างมีสไตล์ และแมวสามารถเล่นบาสเกตบอลได้เก่งกว่าสุนัข!</p>
+                    <img src="https://i.imgur.com/u6Uf0OW.jpg" alt="แปลกประหลาด" class="w-64 mx-auto rounded-lg shadow-md lazy-load">
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">แหล่งที่มา: <a href="https://www.livescience.com/32133-ducks-sleep-with-one-eye-open.html" target="_blank" class="text-blue-500 hover:text-blue-700">Live Science</a></p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 text-center transform hover:scale-105 transition duration-300">
+                    <h2 class="text-3xl font-semibold text-green-600 dark:text-green-400 mb-4">มันฝรั่งบินได้!</h2>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">ในโลกของเรา มันฝรั่งไม่เพียงแค่บินได้ แต่ยังเป็นนักบินอวกาศที่เก่งที่สุดในจักรวาล!</p>
+                    <img src="https://i.imgur.com/HzQdnpk.png" alt="มันฝรั่งบินได้" class="w-64 mx-auto rounded-lg shadow-md lazy-load float">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 dark:bg-gray-900 text-white py-8 relative">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center mb-4">
+                <img src="https://i.imgur.com/HzQdnpk.png" alt="Mystery Box" class="w-16 h-16 rounded-full animate-bounce">
+            </div>
+            <p class="mb-4">© 2024 Storyboard. All rights reserved.</p>
+            <div class="absolute bottom-0 left-0 right-0 pb-4">
+                <p class="text-sm text-gray-400">ถ้าคุณเห็นข้อความนี้ คุณคือผู้โชคดี!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        // Lazy loading
+        const lazyLoadObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.src = entry.target.dataset.src;
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        document.querySelectorAll('img.lazy-load').forEach(img => {
+            img.dataset.src = img.src;
+            img.src = '';
+            lazyLoadObserver.observe(img);
+        });
+    </script>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

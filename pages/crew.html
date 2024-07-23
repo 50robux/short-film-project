@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ทีมงาน - Storyboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sarabun': ['Sarabun', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .float { animation: float 3s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sarabun transition-colors duration-300">
+    <header class="bg-white dark:bg-gray-800 shadow-md fixed w-full z-10 transition-colors duration-300">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-semibold">Storyboard</a>
+            <div class="flex items-center">
+                <a href="actors.html" class="text-lg mr-4 hover:text-blue-600 transition duration-300">นักแสดง</a>
+                <a href="crew.html" class="text-lg mr-4 text-blue-600 font-semibold">ทีมงาน</a>
+                <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-24 pb-12">
+        <section class="container mx-auto px-6">
+            <h1 class="text-4xl font-bold mb-8 text-center text-indigo-700 dark:text-indigo-400">ทีมงาน</h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Scene 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <h2 class="text-2xl font-semibold mb-4 text-indigo-600 dark:text-indigo-300 flex items-center">
+                        <i class="fas fa-film mr-2"></i>Scene 1: ห้องซอมซ่อของตัวละครชาย
+                    </h2>
+
+                    <div class="mb-4 flex items-center">
+                        <i class="far fa-clock text-indigo-500 dark:text-indigo-300 mr-2"></i>
+                        <span class="bg-indigo-100 dark:bg-indigo-700 dark:text-indigo-100 text-indigo-800 text-sm font-semibold px-2.5 py-0.5 rounded">
+                            ระยะเวลา: 10 วินาที
+                        </span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-user-alt text-indigo-500 dark:text-indigo-300 mt-1 mr-2"></i>
+                            <div>
+                                <strong class="text-gray-700 dark:text-gray-300">ตัวละคร:</strong>
+                                <p>ตัวละครชาย (สวมหน้ากากอิโมจิหน้าซึมเศร้า 😞)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-camera text-indigo-500 dark:text-indigo-300 mt-1 mr-2"></i>
+                            <div>
+                                <strong class="text-gray-700 dark:text-gray-300">มุมกล้อง:</strong>
+                                <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
+                                    <li>มุมกล้องกว้าง (Wide shot) แสดงบรรยากาศห้องซอมซ่อ - 6 วินาที</li>
+                                    <li>มุมกล้องใกล้ (Close-up) แสดงหน้าตัวละครที่ดูซึมเศร้า - 4 วินาที</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-info-circle text-indigo-500 dark:text-indigo-300 mt-1 mr-2"></i>
+                            <div>
+                                <strong class="text-gray-700 dark:text-gray-300">รายละเอียด:</strong>
+                                <p>ตัวละครนั่งอยู่บนเตียงหรือโซฟาในห้องที่รกๆ, มีขยะ กระป๋องเบียร์ และเสื้อผ้าเกลื่อนกลาด, ตัวละครหยิบมือถือขึ้นมากดเลือกวิดีโอโป๊</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="font-semibold text-indigo-600 dark:text-indigo-300 mb-2 flex items-center">
+                            <i class="fas fa-box-open mr-2"></i>พร็อพที่ต้องใช้:
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-200 dark:bg-gray-700 dark:text-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">หน้ากากอิโมจิหน้าซึมเศร้า</span>
+                            <span class="bg-gray-200 dark:bg-gray-700 dark:text-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">มือถือ</span>
+                            <span class="bg-gray-200 dark:bg-gray-700 dark:text-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">เสื้อผ้าธรรมดาและเก่า</span>
+                            <span class="bg-gray-200 dark:bg-gray-700 dark:text-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">ขยะ</span>
+                            <span class="bg-gray-200 dark:bg-gray-700 dark:text-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">กระป๋องเบียร์</span>
+                            <span class="bg-gray-200 dark:bg-gray-700 dark:text-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">เตียงหรือโซฟา</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center">
+                            <i class="fas fa-lightbulb mr-2"></i>แสงและอุปกรณ์:
+                        </h3>
+                        <p>ใช้แสงที่น้อยเพื่อเน้นความซอมซ่อของห้อง</p>
+                    </div>
+                </div>
+
+                <!-- Scene 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <h2 class="text-2xl font-semibold mb-4 text-indigo-600 dark:text-indigo-300 flex items-center">
+                        <i class="fas fa-film mr-2"></i>Scene 2: โฆษณาเด้งขึ้น
+                    </h2>
+
+                    <div class="mb-4 flex items-center">
+                        <i class="far fa-clock text-indigo-500 dark:text-indigo-300 mr-2"></i>
+                        <span class="bg-indigo-100 dark:bg-indigo-700 dark:text-indigo-100 text-indigo-800 text-sm font-semibold px-2.5 py-0.5 rounded">
+                            ระยะเวลา: 5 วินาที
+                        </span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-camera text-indigo-500 dark:text-indigo-300 mt-1 mr-2"></i>
+                            <div>
+                                <strong class="text-gray-700 dark:text-gray-300">มุมกล้อง:</strong>
+                                <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
+                                    <li>มุมกล้องใกล้ (Close-up) แสดงหน้าจอมือถือ - 3 วินาที</li>
+                                    <li>มุมกล้องใกล้ (Close-up) แสดงใบหน้าตัวละครที่กำลังเซ็ง - 2 วินาที</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-info-circle text-indigo-500 dark:text-indigo-300 mt-1 mr-2"></i>
+                            <div>
+                                <strong class="text-gray-700 dark:text-gray-300">รายละเอียด:</strong>
+                                <p>ตัวละครกำลังถอดกางเกง, โฆษณาพนันดังขึ้นและเด้งขึ้นบนหน้าจอ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center">
+                            <i class="fas fa-box-open mr-2"></i>พร็อพที่ต้องใช้:
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-200 dark:bg-gray-700 dark:text-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">มือถือ</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center">
+                            <i class="fas fa-lightbulb mr-2"></i>แสงและอุปกรณ์:
+                        </h3>
+                        <p>ใช้แสงธรรมชาติเพื่อเน้นการเปลี่ยนแปลงเมื่อโฆษณาเด้งขึ้น</p>
+                    </div>
+                </div>
+
+                <!-- Scene 3 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <h2 class="text-2xl font-semibold mb-4 text-indigo-600 dark:text-indigo-300 flex items-center">
+                        <i class="fas fa-film mr-2"></i>Scene 3: ตัวละครกดข้ามโฆษณา
+                    </h2>
+
+                    <div class="mb-4 flex items-center">
+                        <i class="far fa-clock text-indigo-500 dark:text-indigo-300 mr-2"></i>
+                        <span class="bg-indigo-100 dark:bg-indigo-700 dark:text-indigo-100 text-indigo-800 text-sm font-semibold px-2.5 py-0.5 rounded">
+                            ระยะเวลา: 5 วินาที
+                        </span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-camera text-indigo-500 dark:text-indigo-300 mt-1 mr-2"></i>
+                            <div>
+                                <strong class="text-gray-700 dark:text-gray-300">มุมกล้อง:</strong>
+                                <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
+                                    <li>มุมกล้องใกล้ (Close-up) แสดงนิ้วมือที่กดข้ามโฆษณาบนหน้าจอมือถือ - 2 วินาที</li>
+                                    <li>มุมกล้องกว้าง (Wide shot) แสดงตัวละครที่กำลังถอดกางเกงอีกครั้ง - 3 วินาที</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-info-circle text-indigo-500 dark:text-indigo-300 mt-1 mr-2"></i>
+                            <div>
+                                <strong class="text-gray-700 dark:text-gray-300">รายละเอียด:</strong>
+                                <p>ตัวละครเซ็งๆ และต้องเอามือไปกดข้ามโฆษณา</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center">
+                            <i class="fas fa-box-open mr-2"></i>พร็อพที่ต้องใช้:
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-200 dark:bg-gray-700 dark:text-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">มือถือ</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center">
+                            <i class="fas fa-lightbulb mr-2"></i>แสงและอุปกรณ์:
+                        </h3>
+                        <p>ใช้แสงที่น้อยและเงาเพื่อเน้นอารมณ์เซ็งของตัวละคร</p>
+                    </div>
+                </div>
+
+                <!-- Scene 4 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <h2 class="text-2xl font-semibold mb-4 text-indigo-600 dark:text-indigo-300 flex items-center">
+                        <i class="fas fa-film mr-2"></i>Scene 4: โฆษณาเด้งขึ้นอีกครั้ง
+                    </h2>
+
+                    <div class="mb-4 flex items-center">
+                        <i class="far fa-clock text-indigo-500 dark:text-indigo-300 mr-2"></i>
+                        <span class="bg-indigo-100 dark:bg-indigo-700 dark:text-indigo-100 text-indigo-800 text-sm font-semibold px-2.5 py-0.5 rounded">
+                            ระยะเวลา: 5 วินาที
+                        </span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-camera text-indigo-500 dark:text-indigo-300 mt-1 mr-2"></i>
+                            <div>
+                                <strong class="text-gray-700 dark:text-gray-300">มุมกล้อง:</strong>
+                                <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
+                                    <li>มุมกล้องกว้าง (Wide shot) แสดงตัวละครที่กำลังถอดกางเกง - 3 วินาที</li>
+                                    <li>มุมกล้องใกล้ (Close-up) แสดงหน้าจอมือถือที่มีโฆษณาเด้งขึ้นมาอีกครั้ง - 2 วินาที</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-info-circle text-indigo-500 dark:text-indigo-300 mt-1 mr-2"></i>
+                            <div>
+                                <strong class="text-gray-700 dark:text-gray-300">รายละเอียด:</strong>
+                                <p>ตัวละครต้องกดข้ามโฆษณาอีกรอบและทำหน้าเซ็ง</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center">
+                            <i class="fas fa-box-open mr-2"></i>พร็อพที่ต้องใช้:
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-200 dark:bg-gray-700 dark:text-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">มือถือ</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center">
+                            <i class="fas fa-lightbulb mr-2"></i>แสงและอุปกรณ์:
+                        </h3>
+                        <p>ใช้แสงธรรมชาติเพื่อให้เห็นการเปลี่ยนแปลงเมื่อโฆษณาเด้งขึ้น</p>
+                    </div>
+                </div>
+
+                <!-- Scene 5 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <h2 class="text-2xl font-semibold mb-4 text-indigo-600 dark:text-indigo-300 flex items-center">
+                        <i class="fas fa-film mr-2"></i>Scene 5: โฆษณาเด้งขึ้นครั้งสุดท้าย
+                    </h2>
+
+                    <div class="mb-4 flex items-center">
+                        <i class="far fa-clock text-indigo-500 dark:text-indigo-300 mr-2"></i>
+                        <span class="bg-indigo-100 dark:bg-indigo-700 dark:text-indigo-100 text-indigo-800 text-sm font-semibold px-2.5 py-0.5 rounded">
+                            ระยะเวลา: 10 วินาที
+                        </span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-camera text-indigo-500 dark:text-indigo-300 mt-1 mr-2"></i>
+                            <div>
+                                <strong class="text-gray-700 dark:text-gray-300">มุมกล้อง:</strong>
+                                <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
+                                    <li>มุมกล้องกว้าง (Wide shot) แสดงตัวละครที่กำลังถอดกางเกง - 4 วินาที</li>
+                                    <li>มุมกล้องใกล้ (Close-up) แสดงหน้าจอมือถือที่มีโฆษณาเด้งขึ้นและผู้หญิงโผล่ออกมาจากจอ - 3 วินาที</li>
+                                    <li>มุมกล้องเฉียง (Angle shot) ใช้ CG ทำให้ดูเหมือนผู้หญิงออกมาจากจอ - 3 วินาที</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-info-circle text-indigo-500 dark:text-indigo-300 mt-1 mr-2"></i>
+                            <div>
+                                <strong class="text-gray-700 dark:text-gray-300">รายละเอียด:</strong>
+                                <p>โฆษณาเด้งขึ้นอีกครั้ง แต่ครั้งนี้เป็นผู้หญิงที่โผล่ออกมาจากจอ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center">
+                            <i class="fas fa-box-open mr-2"></i>พร็อพที่ต้องใช้:
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-200 dark:bg-gray-700 dark:text-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">มือถือ</span>
+                            <span class="bg-gray-200 dark:bg-gray-700 dark:text-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">CG สำหรับผู้หญิงที่ออกมาจากจอ</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center">
+                            <i class="fas fa-lightbulb mr-2"></i>แสงและอุปกรณ์:
+                        </h3>
+                        <p>ใช้แสงที่มีความเข้มเพื่อเน้นการเปลี่ยนแปลง</p>
+                    </div>
+                </div>
+
+                <!-- Scene 6 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <h2 class="text-2xl font-semibold mb-4 text-indigo-600 dark:text-indigo-300 flex items-center">
+                        <i class="fas fa-film mr-2"></i>Scene 6: ผู้หญิงโปรโมทเว็บพนัน
+                    </h2>
+
+                    <div class="mb-4 flex items-center">
+                        <i class="far fa-clock text-indigo-500 dark:text-indigo-300 mr-2"></i>
+                        <span class="bg-indigo-100 dark:bg-indigo-700 dark:text-indigo-100 text-indigo-800 text-sm font-semibold px-2.5 py-0.5 rounded">
+                            ระยะเวลา: 15 วินาที
+                        </span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-user-alt text-indigo-500 dark:text-indigo-300 mt-1 mr-2"></i>
+                            <div>
+                                <strong class="text-gray-700 dark:text-gray-300">ตัวละคร:</strong>
+                                <p>ผู้หญิง (สวมหน้ากากอิโมจิหน้ายิ้มเซ็กซี่ 😏)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-camera text-indigo-500 dark:text-indigo-300 mt-1 mr-2"></i>
+                            <div>
+                                <strong class="text-gray-700 dark:text-gray-300">มุมกล้อง:</strong>
+                                <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
+                                    <li>มุมกล้องกว้าง (Wide shot) แสดงผู้หญิงออกมาจากจอและอยู่ในห้องเดียวกับตัวละครชาย - 7 วินาที</li>
+                                    <li>มุมกล้องใกล้ (Close-up) แสดงหน้าตัวละครชายที่งงและมองมือถือ สลับกับหน้าอกของผู้หญิง - 8 วินาที</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-info-circle text-indigo-500 dark:text-indigo-300 mt-1 mr-2"></i>
+                            <div>
+                                <strong class="text-gray-700 dark:text-gray-300">รายละเอียด:</strong>
+                                <p>ผู้หญิงรูปร่างขาว หน้าอกใหญ่ ใส่ชุดเซ็กซี่ ยื่นมือถือให้ผู้ชาย, ผู้หญิงพูดด้วยกลอนติดปากว่า:</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-200 dark:bg-gray-700 p-4 rounded">
+                        <p>จะชักว่าวอยู่ใย ทำไมไม่ไปเอาของจริงล่ะ<br>
+                            ตอนนี้เขาแจกเงินล้าน ปั่นยังไงก็แตกแน่นอน<br>
+                            ช่วงนี้เขาแจกหนัก นี่เลย มาเล่นสิจ้ะ!</p>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center">
+                            <i class="fas fa-box-open mr-2"></i>พร็อพที่ต้องใช้:
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-200 dark:bg-gray-700 dark:text-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">หน้ากากอิโมจิหน้ายิ้มเซ็กซี่</span>
+                            <span class="bg-gray-200 dark:bg-gray-700 dark:text-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">มือถือ</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center">
+                            <i class="fas fa-lightbulb mr-2"></i>แสงและอุปกรณ์:
+                        </h3>
+                        <p>ใช้แสงสีสดใสเพื่อเน้นความแปลกใหม่และดึงดูดสายตา</p>
+                    </div>
+                </div>
+
+                <!-- Scene 7 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <h2 class="text-2xl font-semibold mb-4 text-indigo-600 dark:text-indigo-300 flex items-center">
+                        <i class="fas fa-film mr-2"></i>Scene 7: ตัวละครชายเล่นเกมสล็อต
+                    </h2>
+
+                    <div class="mb-4 flex items-center">
+                        <i class="far fa-clock text-indigo-500 dark:text-indigo-300 mr-2"></i>
+                        <span class="bg-indigo-100 dark:bg-indigo-700 dark:text-indigo-100 text-indigo-800 text-sm font-semibold px-2.5 py-0.5 rounded">
+                            ระยะเวลา: 15 วินาที
+                        </span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-camera text-indigo-500 dark:text-indigo-300 mt-1 mr-2"></i>
+                            <div>
+                                <strong class="text-gray-700 dark:text-gray-300">มุมกล้อง:</strong>
+                                <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
+                                    <li>มุมกล้องใกล้ (Close-up) แสดงหน้าจอมือถือที่กำลังเล่นเกมสล็อต - 8 วินาที</li>
+                                    <li>มุมกล้องใกล้ (Close-up) แสดงหน้าตัวละครชายที่ยิ้มแย้ม (หน้ากากอิโมจิหน้ายิ้ม 😀) - 7 วินาที</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-info-circle text-indigo-500 dark:text-indigo-300 mt-1 mr-2"></i>
+                            <div>
+                                <strong class="text-gray-700 dark:text-gray-300">รายละเอียด:</strong>
+                                <p>ตัวละครชายลองเล่นเกมสล็อตในเว็บไซต์พนัน, ภาพแสดงการปั่นสล็อตและทำรายได้สำเร็จ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center">
+                            <i class="fas fa-box-open mr-2"></i>พร็อพที่ต้องใช้:
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-200 dark:bg-gray-700 dark:text-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">มือถือ</span>
+                            <span class="bg-gray-200 dark:bg-gray-700 dark:text-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">หน้ากากอิโมจิหน้ายิ้ม</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center">
+                            <i class="fas fa-lightbulb mr-2"></i>แสงและอุปกรณ์:
+                        </h3>
+                        <p>ใช้แสงธรรมชาติเน้นการเปลี่ยนแปลงในช่วงเวลาที่ทำรายได้สำเร็จ</p>
+                    </div>
+                </div>
+
+                <!-- Scene 8 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <h2 class="text-2xl font-semibold mb-4 text-indigo-600 dark:text-indigo-300 flex items-center">
+                        <i class="fas fa-film mr-2"></i>Scene 8: ตัวละครชายก้มกราบผู้หญิง
+                    </h2>
+
+                    <div class="mb-4 flex items-center">
+                        <i class="far fa-clock text-indigo-500 dark:text-indigo-300 mr-2"></i>
+                        <span class="bg-indigo-100 dark:bg-indigo-700 dark:text-indigo-100 text-indigo-800 text-sm font-semibold px-2.5 py-0.5 rounded">
+                            ระยะเวลา: 5 วินาที
+                        </span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-camera text-indigo-500 dark:text-indigo-300 mt-1 mr-2"></i>
+                            <div>
+                                <strong class="text-gray-700 dark:text-gray-300">มุมกล้อง:</strong>
+                                <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
+                                    <li>มุมกล้องกว้าง (Wide shot) แสดงตัวละครชายก้มกราบผู้หญิง และผู้หญิงก็กลับเข้าไปในจอ - 5 วินาที</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-info-circle text-indigo-500 dark:text-indigo-300 mt-1 mr-2"></i>
+                            <div>
+                                <strong class="text-gray-700 dark:text-gray-300">รายละเอียด:</strong>
+                                <p>ตัวละครชายก้มกราบผู้หญิง และผู้หญิงก็กลับเข้าไปในจอ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center">
+                            <i class="fas fa-box-open mr-2"></i>พร็อพที่ต้องใช้:
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-200 dark:bg-gray-700 dark:text-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">หน้ากากอิโมจิ</span>
+                            <span class="bg-gray-200 dark:bg-gray-700 dark:text-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">มือถือ</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center">
+                            <i class="fas fa-lightbulb mr-2"></i>แสงและอุปกรณ์:
+                        </h3>
+                        <p>ใช้แสงธรรมชาติเพื่อให้เห็นการเปลี่ยนแปลงเมื่อผู้หญิงกลับเข้าไปในจอ</p>
+                    </div>
+                </div>
+
+                <!-- Scene 9 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <h2 class="text-2xl font-semibold mb-4 text-indigo-600 dark:text-indigo-300 flex items-center">
+                        <i class="fas fa-film mr-2"></i>Scene 9: ตัวละครชายซื้อบริการทางเพศ
+                    </h2>
+
+                    <div class="mb-4 flex items-center">
+                        <i class="far fa-clock text-indigo-500 dark:text-indigo-300 mr-2"></i>
+                        <span class="bg-indigo-100 dark:bg-indigo-700 dark:text-indigo-100 text-indigo-800 text-sm font-semibold px-2.5 py-0.5 rounded">
+                            ระยะเวลา: 15 วินาที
+                        </span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-camera text-indigo-500 dark:text-indigo-300 mt-1 mr-2"></i>
+                            <div>
+                                <strong class="text-gray-700 dark:text-gray-300">มุมกล้อง:</strong>
+                                <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
+                                    <li>มุมกล้องกว้าง (Wide shot) แสดงตัวละครชายเปิดประตูเข้าห้องหรู - 8 วินาที</li>
+                                    <li>มุมกล้องใกล้ (Close-up) แสดงหน้าตัวละครชายที่ดูตื่นเต้น (หน้ากากอิโมจิหน้าตื่นเต้น 😮) - 7 วินาที</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-info-circle text-indigo-500 dark:text-indigo-300 mt-1 mr-2"></i>
+                            <div>
+                                <strong class="text-gray-700 dark:text-gray-300">รายละเอียด:</strong>
+                                <p>ตัวละครชายไปซื้อบริการทางเพศ เปิดประตูเข้าห้องหรู, มีสาวๆ 3 คนรายล้อมนอนรอในห้อง</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center">
+                            <i class="fas fa-box-open mr-2"></i>พร็อพที่ต้องใช้:
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-200 dark:bg-gray-700 dark:text-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">หน้ากากอิโมจิ</span>
+                            <span class="bg-gray-200 dark:bg-gray-700 dark:text-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">เสื้อผ้าหรู</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center">
+                            <i class="fas fa-lightbulb mr-2"></i>แสงและอุปกรณ์:
+                        </h3>
+                        <p>ใช้แสงที่สว่างและอบอุ่นเพื่อเน้นความหรูหรา</p>
+                    </div>
+                </div>
+
+                <!-- Scene 10 -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <h2 class="text-2xl font-semibold mb-4 text-indigo-600 dark:text-indigo-300 flex items-center">
+                        <i class="fas fa-film mr-2"></i>Scene 10: ตัวละครชายมีเพศสัมพันธ์
+                    </h2>
+
+                    <div class="mb-4 flex items-center">
+                        <i class="far fa-clock text-indigo-500 dark:text-indigo-300 mr-2"></i>
+                        <span class="bg-indigo-100 dark:bg-indigo-700 dark:text-indigo-100 text-indigo-800 text-sm font-semibold px-2.5 py-0.5 rounded">
+                            ระยะเวลา: 10 วินาที
+                        </span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-camera text-indigo-500 dark:text-indigo-300 mt-1 mr-2"></i>
+                            <div>
+                                <strong class="text-gray-700 dark:text-gray-300">มุมกล้อง:</strong>
+                                <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
+                                    <li>มุมกล้องเฉียง (Angle shot) แสดงตัวละครชายทำท่ามีเพศสัมพันธ์อย่างมีความสุข (หน้ากากอิโมจิหน้าหัวเราะ 😂) - 6 วินาที</li>
+                                    <li>มุมกล้องใกล้ (Close-up) แสดงหน้าเว็บพนันอย่างชัดเจน - 4 วินาที</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-info-circle text-indigo-500 dark:text-indigo-300 mt-1 mr-2"></i>
+                            <div>
+                                <strong class="text-gray-700 dark:text-gray-300">รายละเอียด:</strong>
+                                <p>ใช้มุมกล้องหลอกให้ดูเหมือนตัวละครชายกำลังมีเพศสัมพันธ์อย่างมีความสุข, ปิดท้ายด้วยการแสดงหน้าเว็บพนันอย่างชัดเจน</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center">
+                            <i class="fas fa-box-open mr-2"></i>พร็อพที่ต้องใช้:
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-200 dark:bg-gray-700 dark:text-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">หน้ากากอิโมจิ</span>
+                            <span class="bg-gray-200 dark:bg-gray-700 dark:text-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">เสื้อผ้าหรู</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="font-semibold text-indigo-600 dark:text-indigo-300 flex items-center">
+                            <i class="fas fa-lightbulb mr-2"></i>แสงและอุปกรณ์:
+                        </h3>
+                        <p>ใช้แสงสีสดใสเพื่อเน้นความสุขของตัวละครชาย</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+<!-- Cost Section -->
+<section class="bg-gradient-to-r from-purple-500 to-indigo-600 dark:from-purple-800 dark:to-indigo-900 py-16 mt-16">
+    <div class="container mx-auto px-4 max-w-5xl">
+        <h2 class="text-4xl font-bold mb-10 text-center text-white">
+            <i class="fas fa-dollar-sign mr-3 text-yellow-300"></i>ค่าใช้จ่ายต่างๆ
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+            <!-- ค่านักแสดง -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+                <h3 class="text-2xl font-semibold mb-4 text-indigo-600 dark:text-indigo-300">ค่านักแสดง</h3>
+                <ul class="space-y-2">
+                    <li class="flex justify-between">
+                        <span>นักแสดงหลัก (2 คน)</span>
+                        <span class="font-semibold">4,000 บาท</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>นักแสดงสมทบ (3 คน คนละ 1,200 บาท)</span>
+                        <span class="font-semibold">3,600 บาท</span>
+                    </li>
+                </ul>
+                <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <div class="flex justify-between font-bold text-lg">
+                        <span>รวม</span>
+                        <span>7,600 บาท</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ค่าอาหารและเครื่องดื่ม -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+                <h3 class="text-2xl font-semibold mb-4 text-indigo-600 dark:text-indigo-300">ค่าอาหารและเครื่องดื่ม</h3>
+                <ul class="space-y-2">
+                    <li class="flex justify-between">
+                        <span>อาหารว่างและเครื่องดื่ม</span>
+                        <span class="font-semibold">1,000 บาท</span>
+                    </li>
+                </ul>
+                <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <div class="flex justify-between font-bold text-lg">
+                        <span>รวม</span>
+                        <span>1,000 บาท</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ค่าสถานที่ -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+                <h3 class="text-2xl font-semibold mb-4 text-indigo-600 dark:text-indigo-300">ค่าสถานที่</h3>
+                <ul class="space-y-2">
+                    <li class="flex justify-between">
+                        <span>ค่าเช่าห้องซอมซ่อ (1 วัน)</span>
+                        <span class="font-semibold">700 บาท</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>ค่าเช่าห้องหรู หรือ พื้นที่สำหรับจัดปาร์ตี้ส่วนตัว (1 วัน)</span>
+                        <span class="font-semibold">8,000 บาท</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>ค่าเช่า Studio ส่วนตัว (1 วัน)</span>
+                        <span class="font-semibold">4,000 บาท</span>
+                    </li>
+                </ul>
+                <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <div class="flex justify-between font-bold text-lg">
+                        <span>รวม</span>
+                        <span>12,700 บาท</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ค่าเช่าอุปกรณ์ -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+                <h3 class="text-2xl font-semibold mb-4 text-indigo-600 dark:text-indigo-300">ค่าเช่าอุปกรณ์</h3>
+                <ul class="space-y-2">
+                    <li class="flex justify-between">
+                        <span>ค่าเช่ากล้องถ่ายทำ</span>
+                        <span class="font-semibold">3,000 บาท</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>ค่าเช่าไฟและอุปกรณ์แสง</span>
+                        <span class="font-semibold">2,000 บาท</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>ค่าทำพร็อพต่างๆ เช่น หน้ากากอิโมจิ</span>
+                        <span class="font-semibold">3,000 บาท</span>
+                    </li>
+                </ul>
+                <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <div class="flex justify-between font-bold text-lg">
+                        <span>รวม</span>
+                        <span>8,000 บาท</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ค่าใช้จ่ายอื่นๆ -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+                <h3 class="text-2xl font-semibold mb-4 text-indigo-600 dark:text-indigo-300">ค่าใช้จ่ายอื่นๆ</h3>
+                <ul class="space-y-2">
+                    <li class="flex justify-between">
+                        <span>ค่าเดินทาง</span>
+                        <span class="font-semibold">5,000 บาท</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>ค่าทีม (2 คน)</span>
+                        <span class="font-semibold">6,000 บาท</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>ค่าตัดต่อ CG</span>
+                        <span class="font-semibold">3,000 บาท</span>
+                    </li>
+                </ul>
+                <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <div class="flex justify-between font-bold text-lg">
+                        <span>รวม</span>
+                        <span>14,000 บาท</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center">
+            <h3 class="text-2xl font-semibold mb-4 text-indigo-600 dark:text-indigo-300">สรุปค่าใช้จ่าย</h3>
+            <p class="text-3xl font-bold text-indigo-700 dark:text-indigo-300">รวมค่าใช้จ่ายทั้งหมด: 43,300 บาท</p>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">สำหรับวิดีโอความยาว 1.30 นาที</p>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-gray-800 dark:bg-gray-900 text-white py-8 relative">
+    <div class="container mx-auto px-6 text-center">
+        <div class="flex justify-center mb-4">
+            <img src="https://i.imgur.com/HzQdnpk.png" alt="Mystery Box" class="w-16 h-16 rounded-full animate-bounce">
+        </div>
+        <p class="mb-4">© 2024 Storyboard. All rights reserved.</p>
+        <div class="absolute bottom-0 left-0 right-0 pb-4">
+            <p class="text-sm text-gray-400">ถ้าคุณเห็นข้อความนี้ คุณคือผู้โชคดี!</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        // Lazy loading
+        const lazyLoadObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.src = entry.target.dataset.src;
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        document.querySelectorAll('img.lazy-load').forEach(img => {
+            img.dataset.src = img.src;
+            img.src = '';
+            lazyLoadObserver.observe(img);
+        });
+    </script>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
